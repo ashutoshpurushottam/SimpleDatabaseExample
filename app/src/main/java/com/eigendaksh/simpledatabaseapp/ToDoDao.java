@@ -1,5 +1,6 @@
 package com.eigendaksh.simpledatabaseapp;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -18,7 +19,7 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 public interface ToDoDao {
 
     @Query("SELECT * FROM todo")
-    List<TodoEntry> getAllToDos();
+    LiveData<List<TodoEntry>> getAllToDos();
 
     @Insert
     void insertAll(TodoEntry ... todoEntries);

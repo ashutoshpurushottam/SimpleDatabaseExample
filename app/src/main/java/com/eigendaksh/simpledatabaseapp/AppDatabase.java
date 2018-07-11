@@ -3,6 +3,7 @@ package com.eigendaksh.simpledatabaseapp;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
+import android.content.Context;
 
 /**
  * Created by Ashutosh Purushottam on 30/05/18.
@@ -12,5 +13,4 @@ import android.arch.persistence.room.RoomDatabase;
 @Database(entities = {TodoEntry.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract ToDoDao toDoDao();
-
 }
