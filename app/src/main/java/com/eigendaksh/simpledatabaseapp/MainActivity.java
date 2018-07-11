@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getTodoList().observe(MainActivity.this, new Observer<List<TodoEntry>>() {
             @Override
             public void onChanged(@Nullable List<TodoEntry> todoEntries) {
+                // TODO: create your RecyclerView and Adapter and load your data here
+                //todoRecyclerView.getAdapter().setData(todoEntries);
                 Toast.makeText(MainActivity.this, todoEntries.size() + "", Toast.LENGTH_SHORT).show();
             }
         });
